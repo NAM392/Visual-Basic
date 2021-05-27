@@ -62,42 +62,42 @@ End Sub
 
 Sub parcial_1c()
 
-'PORQUERIA'PORQUERIA'PORQUERIA'PORQUERIA'PORQUERIA'PORQUERIA'PORQUERIA'PORQUERIA'PORQUERIA
 
 
-    
-'    Dim i As Integer
-'
-'    Dim Conta As Integer
-'    Dim CARRERA As String
-'    i = 0
-'
-'    Cells(4, 1).Select
-'
-'    Do Until IsEmpty(ActiveCell)
-'
-'        CARRERA = Cells(4 + i, 1)
-'        Cells(4, 1).Select
-'        Do Until IsEmpty(ActiveCell)
-'            If (CARRERA = Cells(4 + Conta, 1)) Then
-'                cantidad = cantidad + 1
-'
-'            End If
-'            Sheets("ESTADISTICA").Select
-'            Cells(2 + i, 2) = CARRERA
-'            Cells(2 + i, 2 + Conta) = cantidad
-'            Conta = Conta + 1
-'            MsgBox (CARRERA)
-'            ActiveCell.Offset(1, 0).Select
-'
-'         Loop
-'
-'        i = i + 1
-'        ActiveCell.Offset(1, 0).Select
-'
-'
-'    Loop
-'
+
+
+    '    Dim i As Integer
+    '
+    '    Dim Conta As Integer
+    '    Dim CARRERA As String
+    '    i = 0
+    '
+    '    Cells(4, 1).Select
+    '
+    '    Do Until IsEmpty(ActiveCell)
+    '
+    '        CARRERA = Cells(4 + i, 1)
+    '        Cells(4, 1).Select
+    '        Do Until IsEmpty(ActiveCell)
+    '            If (CARRERA = Cells(4 + Conta, 1)) Then
+    '                cantidad = cantidad + 1
+    '
+    '            End If
+    '            Sheets("ESTADISTICA").Select
+    '            Cells(2 + i, 2) = CARRERA
+    '            Cells(2 + i, 2 + Conta) = cantidad
+    '            Conta = Conta + 1
+    '            MsgBox (CARRERA)
+    '            ActiveCell.Offset(1, 0).Select
+    '
+    '         Loop
+    '
+    '        i = i + 1
+    '        ActiveCell.Offset(1, 0).Select
+    '
+    '
+    '    Loop
+    '
 
 
 
@@ -225,133 +225,133 @@ Sub convertir_moneda()
 End Sub
 
 
-Private Sub convertir_BTN_Click()               'algoritmo que encontre para el cambio de moneda
-
-    
-If (Me!inicial = Me!a_convertir) Then
-
-    MsgBox ("Las monedas seleccionadas deben ser distintas entre si")
-
-End If
-
-If (Me!inicial > 4 Or Me!inicial < 1) Then
-    
-    MsgBox ("El valor ingresado en 'Moneda Inicial' no es valido")
-
-End If
-
-If (Me!a_convertir > 4 Or Me!a_convertir < 1) Then
-    
-    MsgBox ("El valor ingresado en 'Moneda A Convertir' no es valido")
-
-End If
+Private Sub convertir_BTN_Click()               'algoritmo  cambio de moneda
 
 
-'-----------------------------------------------------
+    If (Me!inicial = Me!a_convertir) Then
 
-If (Me!inicial = 1) And (Me!a_convertir = 2) Then
+        MsgBox("Las monedas seleccionadas deben ser distintas entre si")
 
-    Me!cant_convertida = Me!cantidad * 0.91
-    Me!MONEDA = "Euros"
-    Me!moneda_inicial = "Dolares N.A."
+    End If
 
-End If
+    If (Me!inicial > 4 Or Me!inicial < 1) Then
 
-If (Me!inicial = 1) And (Me!a_convertir = 3) Then
+        MsgBox("El valor ingresado en 'Moneda Inicial' no es valido")
 
-    Me!cant_convertida = Me!cantidad * 109.25
-    Me!MONEDA = "Yenes"
-    Me!moneda_inicial = "Dolares N.A."
+    End If
 
-End If
+    If (Me!a_convertir > 4 Or Me!a_convertir < 1) Then
 
-If (Me!inicial = 1) And (Me!a_convertir = 4) Then
+        MsgBox("El valor ingresado en 'Moneda A Convertir' no es valido")
 
-    Me!cant_convertida = Me!cantidad * 3.36
-    Me!MONEDA = "Nuevos Soles"
-    Me!moneda_inicial = "Dolares N.A."
+    End If
 
-End If
 
-'-----------------------------------------------------
+    '-----------------------------------------------------
 
-If (Me!inicial = 2) And (Me!a_convertir = 1) Then
+    If (Me!inicial = 1) And (Me!a_convertir = 2) Then
 
-    Me!cant_convertida = Me!cantidad * 1.1
-    Me!MONEDA = "D?lares N.A."
-    Me!moneda_inicial = "Euros"
+        Me!cant_convertida = Me!cantidad * 0.91
+        Me!MONEDA = "Euros"
+        Me!moneda_inicial = "Dolares N.A."
 
-End If
+    End If
 
-If (Me!inicial = 2) And (Me!a_convertir = 3) Then
+    If (Me!inicial = 1) And (Me!a_convertir = 3) Then
 
-    Me!cant_convertida = Me!cantidad * 120.39
-    Me!MONEDA = "Yenes"
-    Me!moneda_inicial = "Euros"
+        Me!cant_convertida = Me!cantidad * 109.25
+        Me!MONEDA = "Yenes"
+        Me!moneda_inicial = "Dolares N.A."
 
-End If
+    End If
 
-If (Me!inicial = 2) And (Me!a_convertir = 4) Then
+    If (Me!inicial = 1) And (Me!a_convertir = 4) Then
 
-    Me!cant_convertida = Me!cantidad * 3.7
-    Me!MONEDA = "Nuevos Soles"
-    Me!moneda_inicial = "Euros"
+        Me!cant_convertida = Me!cantidad * 3.36
+        Me!MONEDA = "Nuevos Soles"
+        Me!moneda_inicial = "Dolares N.A."
 
-End If
+    End If
 
-'-------------------------------------------------------
+    '-----------------------------------------------------
 
-If (Me!inicial = 3) And (Me!a_convertir = 1) Then
+    If (Me!inicial = 2) And (Me!a_convertir = 1) Then
 
-    Me!cant_convertida = Me!cantidad * 0.0092
-    Me!MONEDA = "Dolares N.A."
-    Me!moneda_inicial = "Yenes"
+        Me!cant_convertida = Me!cantidad * 1.1
+        Me!MONEDA = "D?lares N.A."
+        Me!moneda_inicial = "Euros"
 
-End If
+    End If
 
-If (Me!inicial = 3) And (Me!a_convertir = 2) Then
+    If (Me!inicial = 2) And (Me!a_convertir = 3) Then
 
-    Me!cant_convertida = Me!cantidad * 0.0083
-    Me!MONEDA = "Euros"
-    Me!moneda_inicial = "Yenes"
+        Me!cant_convertida = Me!cantidad * 120.39
+        Me!MONEDA = "Yenes"
+        Me!moneda_inicial = "Euros"
 
-End If
+    End If
 
-If (Me!inicial = 3) And (Me!a_convertir = 4) Then
+    If (Me!inicial = 2) And (Me!a_convertir = 4) Then
 
-    Me!cant_convertida = Me!cantidad * 0.031
-    Me!MONEDA = "Nuevos Soles"
-    Me!moneda_inicial = "Yenes"
+        Me!cant_convertida = Me!cantidad * 3.7
+        Me!MONEDA = "Nuevos Soles"
+        Me!moneda_inicial = "Euros"
 
-End If
+    End If
 
-'-------------------------------------------------------
+    '-------------------------------------------------------
 
-If (Me!inicial = 4) And (Me!a_convertir = 1) Then
+    If (Me!inicial = 3) And (Me!a_convertir = 1) Then
 
-    Me!cant_convertida = Me!cantidad * 0.3
-    Me!MONEDA = "D?lares N.A."
-    Me!moneda_inicial = "Nuevos Soles"
+        Me!cant_convertida = Me!cantidad * 0.0092
+        Me!MONEDA = "Dolares N.A."
+        Me!moneda_inicial = "Yenes"
 
-End If
+    End If
 
-If (Me!inicial = 4) And (Me!a_convertir = 2) Then
+    If (Me!inicial = 3) And (Me!a_convertir = 2) Then
 
-    Me!cant_convertida = Me!cantidad * 0.27
-    Me!MONEDA = "Euros"
-    Me!moneda_inicial = "Nuevos Soles"
+        Me!cant_convertida = Me!cantidad * 0.0083
+        Me!MONEDA = "Euros"
+        Me!moneda_inicial = "Yenes"
 
-End If
+    End If
 
-If (Me!inicial = 4) And (Me!a_convertir = 3) Then
+    If (Me!inicial = 3) And (Me!a_convertir = 4) Then
 
-    Me!cant_convertida = Me!cantidad * 32.7
-    Me!MONEDA = "Yenes"
-    Me!moneda_inicial = "Nuevos Soles"
+        Me!cant_convertida = Me!cantidad * 0.031
+        Me!MONEDA = "Nuevos Soles"
+        Me!moneda_inicial = "Yenes"
 
-End If
+    End If
 
-'-------------------------------------------------------
+    '-------------------------------------------------------
+
+    If (Me!inicial = 4) And (Me!a_convertir = 1) Then
+
+        Me!cant_convertida = Me!cantidad * 0.3
+        Me!MONEDA = "D?lares N.A."
+        Me!moneda_inicial = "Nuevos Soles"
+
+    End If
+
+    If (Me!inicial = 4) And (Me!a_convertir = 2) Then
+
+        Me!cant_convertida = Me!cantidad * 0.27
+        Me!MONEDA = "Euros"
+        Me!moneda_inicial = "Nuevos Soles"
+
+    End If
+
+    If (Me!inicial = 4) And (Me!a_convertir = 3) Then
+
+        Me!cant_convertida = Me!cantidad * 32.7
+        Me!MONEDA = "Yenes"
+        Me!moneda_inicial = "Nuevos Soles"
+
+    End If
+
+    '-------------------------------------------------------
 
 End Sub
 
@@ -447,9 +447,9 @@ End Sub
 
 Sub contraena()
 
-'ingresa un usuario y contraseña si este no es valido al 3er intento se ciuerra excel
+    'ingresa un usuario y contraseña si este no es valido al 3er intento se cierra excel
 
-Dim ingreso As String
+    Dim ingreso As String
 Dim pass As String
 Dim ch As Byte
 Dim intento As Integer
@@ -603,25 +603,5 @@ librodatos.Close savechanges:=False
 Sheets("DATOS").Select
 ActiveSheet.Paste
 ActiveCell.Select
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 End Sub

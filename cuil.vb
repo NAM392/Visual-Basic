@@ -6,44 +6,36 @@ Private Sub cuit_Click()
 End Sub
 
 Private Sub GUARDAR_Click()
-    
+
     Dim num_CUIT As String
-    
+
     Me!txtcuit.Visible = False 'hago que el cuit se invisible
     Me!cuit.Visible = False
-    
+
     If (Me!Tape <> " " & Me!Tnom <> " ") Then
-         ActiveCell.Offset(0, 1) = Me!Tape
-         ActiveCell.Offset(0, 2) = Me!Tnom
-        
+        ActiveCell.Offset(0, 1) = Me!Tape
+        ActiveCell.Offset(0, 2) = Me!Tnom
+
         If (Me!FEM = True) Then ActiveCell.Offset(0, 3) = "FEMENINO"
-        Else
-            If (Me!MASC = True) Then ActiveCell.Offset(0, 3) = "MASCULINO"
-        End If
-        
-        If (Me!PRIM = True) Then ActiveCell.Offset(0, 4) = "PRIMARIA"
-        If (Me!SEC = True) Then ActiveCell.Offset(0, 4) = "SECUNDARIA"
-        If (Me!UNI = True) Then ActiveCell.Offset(0, 4) = "UNIVERSITARIO"
-        If (Me!PRIM = True) Then ActiveCell.Offset(0, 4) = "POSGRADO"
-        If (Me!FAC = True) Then 'cuando marco la opcion factura A
-             Me!txtcuit.Visible = True ' el texto de cuit se hace visible
-             Me!cuit.Visible = True
-             num_CUIT = Me!txtcuit     ' asigno num_CUIT con el contenido del texto cuit
-             'if (
-                
-            
-            
-        
     Else
-        MsgBox ("CAMPO INCONCLUSO")
-        
-        
+        If (Me!MASC = True) Then ActiveCell.Offset(0, 3) = "MASCULINO"
     End If
-        
-        
-        
-        
-        
+
+    If (Me!PRIM = True) Then ActiveCell.Offset(0, 4) = "PRIMARIA"
+    If (Me!SEC = True) Then ActiveCell.Offset(0, 4) = "SECUNDARIA"
+    If (Me!UNI = True) Then ActiveCell.Offset(0, 4) = "UNIVERSITARIO"
+    If (Me!PRIM = True) Then ActiveCell.Offset(0, 4) = "POSGRADO"
+    If (Me!FAC = True) Then 'cuando marco la opcion factura A
+        Me!txtcuit.Visible = True ' el texto de cuit se hace visible
+        Me!cuit.Visible = True
+        num_CUIT = Me!txtcuit     ' asigno num_CUIT con el contenido del texto cuit
+
+    Else
+        MsgBox("CAMPO INCONCLUSO")
+
+
+    End If
+
 End Sub
 
 

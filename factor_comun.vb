@@ -4,24 +4,17 @@ Dim NUM As Integer
 
 Dim NUM2 As Integer
 
-
-
-NUM = InputBox("ingrese primer numero")
+    NUM = InputBox("ingrese primer numero")
 
 NUM2 = InputBox("ingrese segundo numero")
 
 MsgBox ("el factor comun es " & MCD(NUM, NUM2))
 
-
-
-
-
 End Sub
 
 Function MCD(a As Integer, b As Integer) As Long
 
-
-Dim i As Integer
+    Dim i As Integer
 Dim C As Integer
 Dim D As Integer
 Dim cont As Integer
@@ -58,8 +51,5 @@ If a <> 0 & b <> 0 Then
 End If
 
 End If
-
-
-
 
 End Function

@@ -13,14 +13,12 @@ End Sub
 
 Private Sub GUARDAR_Click()
 
-'ELEGIR EL LIBRO DONDE QUIERO QUE SE GUARDE EL FORMULARIO
+    'ELEGIR EL LIBRO DONDE QUIERO QUE SE GUARDE EL FORMULARIO
 
-    
-    
 
-   If (Me!APELLIDO = "") Or (Me!NOMBRE = "") Then
-        MsgBox ("FALTA DATOS")
-   Else:
+    If (Me!APELLIDO = "") Or (Me!NOMBRE = "") Then
+        MsgBox("FALTA DATOS")
+    Else
         'ThisWorkbook.Select
         cantidad = Sheets.Count
         Sheets.Add after:=Sheets(cantidad)
@@ -43,33 +41,29 @@ Private Sub GUARDAR_Click()
         If (Me!UNIVERSITARIO = True) Then ActiveCell.Offset(5, 1) = "UNIVERSITARIO"
         If (Me!POSGRADO = True) Then ActiveCell.Offset(5, 1) = "POSGRADO"
         If (verificador(Me!CUIT) = 1) Then
-           ActiveCell.Offset(6, 0) = "CUIT : "
-           ActiveCell.Offset(6, 1) = Me!CUIT
+            ActiveCell.Offset(6, 0) = "CUIT : "
+            ActiveCell.Offset(6, 1) = Me!CUIT
         Else
-            MsgBox ("CUIT ERRONEO")
+            MsgBox("CUIT ERRONEO")
         End If
-        
-  End If
-    
-    
-    
-    
-     
-    
+
+    End If
+
+
 End Sub
 
 Function verificador(CUIT As String) As Byte
-Dim msp As Long
-Dim msd As Long
-Dim prod As Long
-Dim modulo As Integer
-Dim j As Integer
-Dim k As Integer
-j = 2
-k = 5
+    Dim msp As Long
+    Dim msd As Long
+    Dim prod As Long
+    Dim modulo As Integer
+    Dim j As Integer
+    Dim k As Integer
+    j = 2
+    k = 5
 
 
-If ((Mid(CUIT, 1, 2)) = 20) Or ((Mid(CUIT, 1, 2)) = 23) Or ((Mid(CUIT, 1, 2)) = 24) Or ((Mid(CUIT, 1, 2)) = 27) Or ((Mid(CUIT, 1, 2)) = 30) Or ((Mid(CUIT, 1, 2)) = 33) Or ((Mid(CUIT, 1, 2)) = 34) Then
+    If ((Mid(CUIT, 1, 2)) = 20) Or ((Mid(CUIT, 1, 2)) = 23) Or ((Mid(CUIT, 1, 2)) = 24) Or ((Mid(CUIT, 1, 2)) = 27) Or ((Mid(CUIT, 1, 2)) = 30) Or ((Mid(CUIT, 1, 2)) = 33) Or ((Mid(CUIT, 1, 2)) = 34) Then
     
      
   For i = 0 To 5
@@ -98,9 +92,6 @@ If ((Mid(CUIT, 1, 2)) = 20) Or ((Mid(CUIT, 1, 2)) = 23) Or ((Mid(CUIT, 1, 2)) = 
     
     
 End If
-    
-
-
 
 
 
@@ -130,9 +121,6 @@ Me!DIRECCION = ""
 Me!CUIT = ""
 
 
-
-
-
 End Sub
 
 Private Sub UserForm_Initialize()
@@ -140,8 +128,6 @@ Me!C_.Visible = False
 Me!CUIT.Visible = False
 
 Me!REG = Sheets.Count
-
-
 
 
 End Sub

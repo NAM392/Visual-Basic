@@ -5,9 +5,6 @@ Sub primera()
     ActiveCell.Value = "Nicolás"                'ESCRIBE EN CELDA ACTIVA
     ActiveCell.Clear                            'BORRA CONTENIDO DE CELDA ACTIVA
 
-
-
-
 End Sub
 
 Sub segunda()
@@ -115,12 +112,11 @@ End Sub
 
 Sub ejercicio_4()
 
-'Pedirle al usuario un nombre y escribirlo 10 veces a partir de la celda A1 en diagonal.
+    'Pedirle al usuario un nombre y escribirlo 10 veces a partir de la celda A1 en diagonal.
 
 
-
-Dim nombre As String                            'DIM _ AS para declarar variable. String es el tipo
-Dim i As Integer                                'Integer es el tipo de variable.
+    Dim nombre As String                            'DIM _ AS para declarar variable. String es el tipo
+    Dim i As Integer                                'Integer es el tipo de variable.
 Dim j As Integer
 
 

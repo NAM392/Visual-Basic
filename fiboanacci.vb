@@ -13,26 +13,21 @@ MsgBox ("en posicion " & ingreso & "el numero fibonacci es " & fibonacci(ingreso
 End Sub
 
 Function fibonacci(NUM As Integer) As Integer
-If NUM = 0 Then
-    FIBO = 0
-Else
-    If NUM = 1 Then
-        fibonacci = 1
+    If NUM = 0 Then
+        FIBO = 0
     Else
-        fibonacci = fibonacci(n - 1) + fibonacci(n - 2)
+        If NUM = 1 Then
+            fibonacci = 1
+        Else
+            fibonacci = fibonacci(n - 1) + fibonacci(n - 2)
+        End If
     End If
-End If
-
-
-
 
 
 End Function
 
 
 Sub binario()
-
-
 
     Dim ingreso As String
     Dim NUM As Long
@@ -52,43 +47,6 @@ Sub binario()
 
 
    MsgBox ("en decimales es : " & BIN)
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 End Sub

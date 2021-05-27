@@ -1,6 +1,6 @@
 Private Sub G_DATOS_Click()
-                            'ingreso uno debajo del otro guardo en hoja nueva y si quiero guardo librpo
-Dim cantidad As Integer
+    'ingreso uno debajo del otro guardo en hoja nueva y si quiero guardo libro
+    Dim cantidad As Integer
 Dim flag As Byte
 Dim NOMBRE As String
 

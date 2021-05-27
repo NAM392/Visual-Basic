@@ -1,21 +1,12 @@
 Sub Botón2_Haga_clic_en()
 
-
-
-
-
-
     Dim NOMBRE As String
     Dim i As Integer
     Dim MAX As Integer
     Dim s As CellFormat
-    
-    
-    
-  
-   
+
     Cells(2, 2).Select
-    
+
     Do Until IsEmpty(ActiveCell)
                
         ActiveCell.Offset(1, 0).Select
@@ -49,9 +40,6 @@ Sub Botón2_Haga_clic_en()
  
    
     MsgBox (MAX)
-     
-
-
 
 
 

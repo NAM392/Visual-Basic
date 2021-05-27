@@ -8,16 +8,13 @@ End Sub
 
 Private Sub GRABAR_Click()
 
-Dim cantidad As Integer
+    Dim cantidad As Integer
 
-
-    
     cantidad = Sheets.Count
     Sheets.Add after:=Sheets(cantidad)
     Sheets(Sheets.Count).Name = "REGISTRO N-" & Sheets.Count
     Sheets("REGISTRO N-" & Sheets.Count).Select
 
-    
     Cells(1, 1).Select
    ActiveCell.Offset(0, 0) = "NOMBRE DEL PROYECTO : "
    ActiveCell.Offset(0, 1) = Me!NOM_PROY
@@ -34,26 +31,10 @@ Dim cantidad As Integer
    ActiveCell.Offset(6, 0) = "PESO O AREA : "
    ActiveCell.Offset(6, 1) = Val(Me!PESO)
    ActiveCell.Offset(6, 2) = "UNIDAD : "
-   ActiveCell.Offset(6, 3) = Me!UNIDAD
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    ActiveCell.Offset(6, 3) = Me!UNIDAD
 
-    
-    
-    
 
 End Sub
-
-
-
 
 
 Private Sub UserForm_Initialize()
@@ -61,32 +42,24 @@ Private Sub UserForm_Initialize()
     Me!hoja = Sheets.Count
 
 
-
-For Each celda In Range("PROYECTO")
-    TIPO.AddItem celda
+    For Each celda In Range("PROYECTO")
+        TIPO.AddItem celda
 Next
     TIPO.ListIndex = 0
-    
-    
-For Each celda In Range("MONEDA")
-    MONEDA.AddItem celda
+
+
+    For Each celda In Range("MONEDA")
+        MONEDA.AddItem celda
 Next
     MONEDA.ListIndex = 0
-    
-    
-    
-    
- For Each celda In Range("UNIDAD")
-    UNIDAD.AddItem celda
+
+
+
+    For Each celda In Range("UNIDAD")
+        UNIDAD.AddItem celda
 Next
     UNIDAD.ListIndex = 0
-    
-    
-    
-    
-    
-    
-    
+
 End Sub
 
 
